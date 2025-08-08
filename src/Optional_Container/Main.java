@@ -38,8 +38,4 @@ public class Main {
                 map(email->email.substring(email.indexOf("@")+1)).ifPresent(System.out::println);
 
     }
-
-
-
-
 }
