@@ -1,5 +1,5 @@
 package Strategy_Pattern_LLD;
-interface PaymentStrategy{
+interface PaymentStrategy {
     public void pay(Double amount);
 }
 
@@ -7,14 +7,14 @@ class creditcardpayment implements  PaymentStrategy{
     @Override
     public void pay(Double amount)
     {
-        System.out.println("Amout pay "+amount+"in credit card");
+        System.out.println("Amount pay "+amount+"in credit card");
     }
 }
 class upipayment implements  PaymentStrategy{
     @Override
     public void pay(Double amount)
     {
-        System.out.println("Amout pay "+amount+"in upi payment");
+        System.out.println("Amount pay "+amount+"in upi payment");
     }
 }
 
@@ -41,7 +41,7 @@ public class Main {
 }
 
 /*
-Advantages
+Advantages:
 Follows Open/Closed Principle → You can add new strategies without touching existing code.
 Cleaner and more maintainable.
 Each strategy is testable in isolation.

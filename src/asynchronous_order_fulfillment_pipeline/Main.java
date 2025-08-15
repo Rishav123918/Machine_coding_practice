@@ -111,5 +111,7 @@ public class Main {
 
 /*
 
-
+Type :
+CompletableFuture.supplyAsync
+.thenApply
  */
