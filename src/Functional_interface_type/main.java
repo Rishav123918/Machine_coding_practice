@@ -35,6 +35,7 @@ public class main {
 
         Consumer<String>st6=str-> System.out.println("data saved"+str);
         List<String>li=List.of("Hello","world");
+        li.add("ghgh");
         li.forEach(st6);
         st6.accept("vdghvhe");
 /// ////////////////////////////

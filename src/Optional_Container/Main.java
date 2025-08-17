@@ -36,6 +36,34 @@ public class Main {
                 .ifPresent(System.out::println);
         Optional.ofNullable(user4).map(User::getName).filter(email->email.contains("@")).
                 map(email->email.substring(email.indexOf("@")+1)).ifPresent(System.out::println);
+        Optional<String>user7= Optional.of("Hello World").filter(name->name.toLowerCase().contains("Hello"));
+        System.out.println(user7);
+        /*
+        .filter(...) returns an Optional<String> ✅
+        .orElse("no name") does not return an Optional, it returns a String ❌
+         */
+         String str=" hello world";
+         Optional<String>opt=Optional.ofNullable(null);
+        System.out.println(opt.isPresent());
+        boolean x=Optional.ofNullable(str).map(String::length).filter(val1->val1>5).isPresent();
+        boolean x1=Optional.ofNullable(str).map(String::trim).filter(val2->val2.contains("k")).isPresent();
+        System.out.println(x+"  "+x1);
+
+
+
 
     }
 }
+
+/*
+Use ofNullable() when a value might be null.
+Use map() when you want to transform the value inside Optional.
+Use filter() when you want to apply a condition on the value.
+
+| Method              | Purpose                               | Input                   | Output                  | Return Type   |
+| ------------------- | ------------------------------------- | ----------------------- | ----------------------- | ------------- |
+| `ofNullable(value)` | Wraps value into Optional (null-safe) | Any value (can be null) | Optional.empty if null  | `Optional<T>` |
+| `map(Function)`     | Transform value inside Optional       | Function: T → U         | Applies only if present | `Optional<U>` |
+| `filter(Predicate)` | Keep value only if condition true     | Predicate: T → boolean  | Empty if false          | `Optional<T>` |
+
+ */
