@@ -16,7 +16,7 @@ class translator implements Englishspeaker{
     }
 
     @Override
-    public void speaker(String words) {
+    public void speaker(String words){
         String translated=englishtospanish(words);
         spanishspeaker.spanish(translated);
     }

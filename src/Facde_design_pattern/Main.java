@@ -16,6 +16,7 @@ class SecurityService{
  }
 }
 class BalanceService{
+
    private double balance=10000;
    public boolean checkbalance(double amount){
        if(amount<=balance){
